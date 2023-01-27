@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
  
     }
     
-    
+    public float speed = 5f;
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +19,6 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 movement = new Vector3(verticalInput, 0.0f, horizontalInput);
-        transform.position += movement * Time.deltaTime;
+        transform.position += movement * speed * Time.deltaTime;
     }
 }
