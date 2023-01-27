@@ -23,12 +23,12 @@ public class Player : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            transform.position += movement * (speed * 2) * Time.deltaTime;
+            transform.position += movement * (speed) * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.RightShift))
         {
-            transform.position += movement * (speed * 2) * Time.deltaTime;
+            transform.position += movement * (speed) * Time.deltaTime;
         }
     }
 }
