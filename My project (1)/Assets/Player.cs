@@ -20,5 +20,15 @@ public class Player : MonoBehaviour
 
         Vector3 movement = new Vector3(verticalInput, 0.0f, horizontalInput);
         transform.position += movement * speed * Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed *= 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            speed *= 2;
+        }
     }
 }
