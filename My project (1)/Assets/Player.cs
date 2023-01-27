@@ -21,14 +21,14 @@ public class Player : MonoBehaviour
         Vector3 movement = new Vector3(verticalInput, 0.0f, horizontalInput);
         transform.position += movement * speed * Time.deltaTime;
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.LeftShift))
         {
-            speed *= 2;
+            transform.position += movement * (speed * 2) * Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.RightShift))
         {
-            speed *= 2;
+            transform.position += movement * (speed * 2) * Time.deltaTime;
         }
     }
 }
